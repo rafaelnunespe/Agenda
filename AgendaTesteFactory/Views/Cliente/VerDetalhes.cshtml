@@ -1,0 +1,49 @@
+﻿@model ClienteModel
+@{
+    ViewData["Title"] = "Detalhes";
+}
+
+
+<div class="text-center">
+
+    <h1 class="display-4">Detalhes</h1>
+
+</div>
+
+
+<form asp-controller="Cliente" asp-action="VerDetalhes" method="get">
+
+    <input type="hidden" asp-for="Id" />
+
+    <div class="form-group">
+        <label for="nome" class="form-label">Nome: </label>
+        <label for="nome" class="form-label">@Model.Nome</label>
+    </div>
+
+    <div class="form-group">
+        <label for="email" class="form-label">E-mail: </label>
+        <label for="email" class="form-label">@Model.Email</label>
+    </div>
+
+    <div class="form-group">
+        <label for="fone" class="form-label">Celular: </label>
+        <label for="fone" class="form-label">@Model.Celular</label>
+    </div>
+
+    <div class="form-group">
+        <label for="Logradouro" class="form-label">Logradouro: </label>
+        <label for="Logradouro" class="form-label">@Model.Endereco.Logradouro</label>
+    </div>
+
+    <div class="form-group">
+        <label for="Cidade" class="form-label">Cidade/Estado: </label>
+        <label for="Cidade" class="form-label">@Model.Endereco.Cidade</label>
+    </div>
+
+    <div class="form-group">
+        <label for="Cep" class="form-label">CEP: </label>
+        <label for="Cep" class="form-label">@Model.Endereco.CEP</label>
+    </div>
+
+    <a class="btn btn-secondary btn-block" asp-controller="Cliente" asp-action="Index">Voltar</a>
+</form>

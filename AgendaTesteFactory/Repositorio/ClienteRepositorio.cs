@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using AgendaTesteFactory.Data;
 using AgendaTesteFactory.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace AgendaTesteFactory.Repositorio
 {
@@ -18,7 +19,7 @@ namespace AgendaTesteFactory.Repositorio
 
         public ClienteModel BuscarPorId(int id)
         {
-            return _bancoContext.Clientes.FirstOrDefault(x => x.Id == id);
+            return _bancoContext.Clientes.Include(x => x.Endereco).FirstOrDefault(x => x.Id == id);
         }
 
         public List<ClienteModel> BuscarTodos()

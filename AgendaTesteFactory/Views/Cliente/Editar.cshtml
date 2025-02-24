@@ -12,9 +12,9 @@
 
 
 <form asp-controller="Cliente" asp-action="Editar" method="post">
-    
+
     <input type="hidden" asp-for="Id" />
-    
+
     <div class="form-group">
         <label for="nome" class="form-label">Nome</label>
         <input type="text" asp-for="Nome" class="form-control" placeholder="Informe o nome completo do cliente">
@@ -31,6 +31,24 @@
         <label for="fone" class="form-label">Celular</label>
         <input type="number" asp-for="Celular" class="form-control" placeholder="Informe o nuúmer de contato do cliente">
         @Html.ValidationMessageFor(x => x.Celular)
+    </div>
+
+    <div class="form-group">
+        <label for="fone" class="form-label">Rua/Avenida/Alameda</label>
+        <input type="text" asp-for="Endereco.Logradouro" class="form-control" placeholder="Informe o número de contato do cliente">
+        @Html.ValidationMessageFor(x => x.Endereco)
+    </div>
+
+    <div class="form-group">
+        <label for="fone" class="form-label">Cidade/Estado</label>
+        <input type="text" asp-for="Endereco.Cidade" class="form-control" placeholder="Informe o número de contato do cliente">
+        @Html.ValidationMessageFor(x => x.Endereco)
+    </div>
+
+    <div class="form-group">
+        <label for="fone" class="form-label">CEP</label>
+        <input type="number" asp-for="Endereco.CEP" class="form-control" placeholder="Informe o número de contato do cliente">
+        @Html.ValidationMessageFor(x => x.Endereco)
     </div>
 
     <button type="submit" class="btn btn-primary btn-block" asp-controller="Cliente" asp-action="Editar">Editar</button>

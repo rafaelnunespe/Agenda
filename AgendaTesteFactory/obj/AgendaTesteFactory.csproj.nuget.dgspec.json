@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ranpereira\\source\\repos\\AgendaTesteFactory\\AgendaTesteFactory\\AgendaTesteFactory.csproj": {}
+    "C:\\Users\\ranpereira\\Documents\\Agenda\\AgendaTesteFactory\\AgendaTesteFactory.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ranpereira\\source\\repos\\AgendaTesteFactory\\AgendaTesteFactory\\AgendaTesteFactory.csproj": {
+    "C:\\Users\\ranpereira\\Documents\\Agenda\\AgendaTesteFactory\\AgendaTesteFactory.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ranpereira\\source\\repos\\AgendaTesteFactory\\AgendaTesteFactory\\AgendaTesteFactory.csproj",
+        "projectUniqueName": "C:\\Users\\ranpereira\\Documents\\Agenda\\AgendaTesteFactory\\AgendaTesteFactory.csproj",
         "projectName": "AgendaTesteFactory",
-        "projectPath": "C:\\Users\\ranpereira\\source\\repos\\AgendaTesteFactory\\AgendaTesteFactory\\AgendaTesteFactory.csproj",
+        "projectPath": "C:\\Users\\ranpereira\\Documents\\Agenda\\AgendaTesteFactory\\AgendaTesteFactory.csproj",
         "packagesPath": "C:\\Users\\ranpereira\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ranpereira\\source\\repos\\AgendaTesteFactory\\AgendaTesteFactory\\obj\\",
+        "outputPath": "C:\\Users\\ranpereira\\Documents\\Agenda\\AgendaTesteFactory\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ranpereira\\AppData\\Roaming\\NuGet\\NuGet.Config",

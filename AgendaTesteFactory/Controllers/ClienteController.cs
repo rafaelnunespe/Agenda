@@ -23,6 +23,12 @@ namespace AgendaTesteFactory.Controllers
             return View(clientes);
         }
 
+        public IActionResult VerDetalhes(int id)
+        {
+            ClienteModel cliente = _clienteRepositorio.BuscarPorId(id);
+            return View(cliente);
+        }
+
         public IActionResult Cadastrar()
         {
             return View();
@@ -67,12 +73,13 @@ namespace AgendaTesteFactory.Controllers
         }
 
         [HttpPost]
-        public IActionResult Cadastrar(ClienteModel cliente)
+        public IActionResult Cadastrar(ClienteModel cliente, EnderecoModel endereco)
         {
             try
             {
                 if (ModelState.IsValid)
                 {
+                    cliente.Endereco = endereco;
                     _clienteRepositorio.Adicionar(cliente);
                     TempData["MensagemSucesso"] = "Cliente cadastrado com sucesso!";
                     return RedirectToAction("Index");

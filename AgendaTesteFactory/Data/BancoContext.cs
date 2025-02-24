@@ -14,5 +14,16 @@ namespace AgendaTesteFactory.Data
         }
 
         public DbSet<ClienteModel> Clientes { get; set; }
+        public DbSet<EnderecoModel> Endereco { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<EnderecoModel>()
+                .HasOne(e => e.Cliente)
+                .WithOne(c => c.Endereco)
+                .HasForeignKey<EnderecoModel>(e => e.Id);
+
+            base.OnModelCreating(modelBuilder);
+        }
     }
 }
